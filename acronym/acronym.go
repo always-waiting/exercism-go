@@ -34,3 +34,28 @@ func Map(vs []string, f func(string) string) []string {
 	}
 	return mvs
 }
+
+/*
+最佳实现!
+// Package acronym has the function abbreviate to build an acronym
+package acronym
+
+import (
+	"strings"
+	"unicode"
+)
+
+func separator(r rune) bool {
+	return unicode.IsSpace(r) || unicode.IsPunct(r)
+}
+
+// Abbreviate returns an acronym in uppercase
+func Abbreviate(s string) string {
+	var output string
+
+	for _, word := range strings.FieldsFunc(s, separator) {
+		output += word[:1]
+	}
+	return strings.ToUpper(output)
+}
+*/
