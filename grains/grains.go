@@ -21,3 +21,10 @@ func Total() uint64 {
 	}
 	return sum
 }
+
+/*
+//pot returns the power of two of a number.
+func pot(n int) uint64 {
+	return 1 << uint(n)
+}
+*/
