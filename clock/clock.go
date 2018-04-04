@@ -44,3 +44,40 @@ func (clock Clock) Subtract(n int) Clock {
 	clock.timeRule()
 	return clock
 }
+
+/*
+package clock
+
+import "fmt"
+
+type Clock int
+
+const minInHour = 60
+const minInDay = 24 * 60
+
+//New returns a new Clock.
+func New(h int, m int) Clock {
+	c := (h*minInHour + m) % minInDay
+
+	if c < 0 {
+		c += minInDay
+	}
+
+	return Clock(c)
+}
+
+//String returns a string representation of the Clock.
+func (c Clock) String() string {
+	return fmt.Sprintf("%02d:%02d", c/minInHour, c%minInHour)
+}
+
+//Add returns a new clock adding the minutes.
+func (c Clock) Add(m int) Clock {
+	return New(0, int(c)+m)
+}
+
+//Subtract returns a new clock subtracting the minutes.
+func (c Clock) Subtract(m int) Clock {
+	return New(0, int(c)-m)
+}
+*/
